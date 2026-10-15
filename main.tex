@@ -1,0 +1,88 @@
+% FedPASA @ WWW'27 — double-blind submission draft
+% Build: powershell -ExecutionPolicy Bypass -File build.ps1
+\documentclass[sigconf,anonymous,balance=false]{acmart}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{needspace}
+\setlength{\emergencystretch}{1em}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.85}
+
+\newtheorem{proposition}{Proposition}
+
+\setcopyright{none}
+\settopmatter{printacmref=true,printfolios=true}
+\acmConference[WWW '27]{The ACM Web Conference 2027}{May 10--14, 2027}{Dublin, Ireland}
+\acmBooktitle{Proceedings of the ACM Web Conference 2027 (WWW '27)}
+\acmYear{2027}
+\copyrightyear{2027}
+\acmDOI{}
+\acmISBN{}
+
+\begin{document}
+\raggedbottom
+
+\title{FedPASA: Reliability-Aware Semantic Adaptation for Cross-Domain Federated Recommendation}
+
+\author{Anonymous Author(s)}
+
+
+\begin{abstract}
+Federated recommendation (FR) enables collaborative model training while keeping user interactions local. However, transferring recommendation knowledge across services remains challenging due to disjoint item catalogs and uneven target-domain supervision. Frequently observed items provide abundant interaction evidence, whereas low-frequency items offer limited supervision, and client-specific preferences further introduce heterogeneity into semantic adaptation. Existing approaches commonly employ shared transformations or client-level personalization without explicitly accounting for differences in item-level supervision. To address these challenges, we propose FedPASA, a reliability-aware semantic adaptation framework for cross-domain federated recommendation. FedPASA introduces Popularity-Gated Dual-path Routing (PGDR), which combines two residual adaptation paths using item-frequency-derived weights. A private client profile further conditions the adapted representations through feature-wise scaling and shifting, while AutoAnchor incorporates pretrained semantic information through catalog-level anchoring. Extensive experiments on real-world cross-domain recommendation benchmarks demonstrate the effectiveness of FedPASA. The proposed framework achieves superior average cross-domain recommendation performance over competitive baselines under both sampled and full-catalog ranking. Further analyses demonstrate that frequency-aware routing improves recommendation accuracy beyond additional adapter capacity, while client conditioning and semantic anchoring provide complementary adaptation capabilities.
+\end{abstract}
+
+
+\begin{CCSXML}
+<ccs2012>
+<concept><concept_id>10002951.10003317.10003347.10003350</concept_id>
+<concept_desc>Information systems~Recommender systems</concept_desc>
+<concept_significance>500</concept_significance></concept>
+<concept><concept_id>10010147.10010919</concept_id>
+<concept_desc>Computing methodologies~Distributed computing methodologies</concept_desc>
+<concept_significance>300</concept_significance></concept>
+</ccs2012>
+\end{CCSXML}
+\ccsdesc[500]{Information systems~Recommender systems}
+\ccsdesc[300]{Computing methodologies~Distributed computing methodologies}
+
+\keywords{Federated Recommendation; Cross-Domain Recommendation; Semantic Transfer; Long-tail Recommendation}
+
+\maketitle
+
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/method}
+\input{sections/experiments}
+\input{sections/conclusion}
+\twocolumn
+% Reset column height after the final double-column floats.
+\makeatletter
+\global\@colht\textheight
+\global\@colroom\textheight
+\global\vsize\textheight
+\makeatother
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+
+% --- appendix_revised ---
+\appendix
+\input{appendices/dataset_statistics}
+\input{appendices/full_ranking_seed_variation}
+\input{appendices/additional_baselines_ablations}
+\input{appendices/hyperparameters_robustness}
+\end{document}

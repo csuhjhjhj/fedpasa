@@ -1,0 +1,150 @@
+% !TeX root = ../main.tex
+\clearpage
+\twocolumn[{\section{Hyperparameters and Robustness Analysis}\label{app:extra}\label{app:sampled}
+
+
+
+% --- appendix_fullranking_top ---
+\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{Validation-only selection on Music$\to$Movies (mean sampled HR@20 over three runs; eight rounds, 30 local steps). Stage 1 fixes $\lambda=.4,\rho=.2$; Stage 2 fixes the selected $\alpha=.85,\kappa=.5$. The final choice is $(.85,.5,.2,.3)$.}\label{tab:validation-grid}
+\begin{minipage}{.48\textwidth}\centering
+\begin{tabular}{lrrr}\toprule
+$\alpha\backslash\kappa$ & .5 & .7 & 1.0\\\midrule
+0.4 & 0.2807 & 0.2640 & 0.2517\\
+0.55 & 0.3261 & 0.2871 & 0.2626\\
+0.7 & 0.3657 & 0.3139 & 0.2721\\
+0.85 & 0.3851 & 0.3541 & 0.2883\\
+\bottomrule\end{tabular}\end{minipage}\hfill\begin{minipage}{.48\textwidth}\centering
+\begin{tabular}{lrrr}\toprule
+$\lambda\backslash\rho$ & .1 & .2 & .3\\\midrule
+0.2 & 0.3917 & 0.3917 & 0.3925\\
+0.4 & 0.3879 & 0.3851 & 0.3893\\
+0.6 & 0.3842 & 0.3874 & 0.3817\\
+\bottomrule\end{tabular}\end{minipage}\end{minipage}\par\addvspace{6pt}
+
+
+}]
+
+% --- appendix_settings_left ---
+\subsection{Configuration}
+\label{app:hyper}
+\par\addvspace{3pt}\noindent\begin{minipage}{\columnwidth}\centering\footnotesize
+\captionof{table}{Default configuration. Sensitivity experiments vary one setting at a time.}
+\label{tab:hyper}
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\columnwidth}{@{}p{.36\columnwidth}X@{}}
+\toprule
+Setting & Value \\
+\midrule
+Frozen encoder & DistilBERT-base-uncased, $d=768$ \\
+Adapter & 2 residual blocks; bottleneck 64; dropout 0.1 \\
+Optimizer & AdamW; lr $10^{-3}$; weight decay $10^{-4}$ \\
+BPR batches & 32 positives; 3 negatives/positive; logit scale 10 \\
+Federation & Cross: $12\times60$ rounds/steps; target Books: $8\times30$ \\
+Clients & 5 \\
+Mixing / FiLM & $\alpha=.85$, $t=0$, $\kappa=.5$, $\lambda=.2$ \\
+Anchor & $\rho=.3$; $[\tau_l,\tau_h]=[1,1.5]$ \\
+Proximal terms & FedProx: $.1$; L2-SP: $.01$; base FedPASA: $0$ \\
+Final personalization & 40 local steps, $\mu_p=.15$ (full FedPASA and pFedMe) \\
+FedMF baseline & 64-dimensional factors; 25 rounds, 80 steps/round \\
+\bottomrule
+\end{tabularx}
+\end{minipage}\par\addvspace{3pt}
+
+
+% --- sensitivity_values_revised ---
+\par\noindent\begin{minipage}{\columnwidth}\centering\footnotesize
+\captionof{table}{HR@20/NDCG@20 for Figure~\ref{fig:sensitivity} (Music$\to$Movies, three runs). (d): selected default.}\label{tab:sensitivity-values}
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrr@{}}
+\toprule
+Factor & Value & HR@20/NDCG@20 \\
+\midrule
+$\alpha$ & 0.55 & 0.4543/0.1935 \\
+ & 0.7 & 0.4782/0.2079 \\
+ & 0.85 & 0.4938/0.2194 (d) \\
+ & 1.0 & 0.4963/0.2223 \\
+$\kappa$ & 0.35 & 0.4998/0.2233 \\
+ & 0.5 & 0.4938/0.2194 (d) \\
+ & 0.7 & 0.4842/0.2100 \\
+ & 1.0 & 0.4249/0.1779 \\
+$\lambda$ & 0.0 & 0.4563/0.2010 \\
+ & 0.1 & 0.4845/0.2110 \\
+ & 0.2 & 0.4938/0.2194 (d) \\
+ & 0.4 & 0.4955/0.2208 \\
+$\rho$ & 0.0 & 0.4949/0.2190 \\
+ & 0.1 & 0.4952/0.2208 \\
+ & 0.2 & 0.4943/0.2199 \\
+ & 0.3 & 0.4938/0.2194 (d) \\
+ & 0.5 & 0.4919/0.2208 \\
+\bottomrule
+\end{tabular*}
+\end{minipage}\par\addvspace{6pt}
+
+
+
+\subsection{Baseline Configuration}\label{app:native}
+FFMSR uses BERT features and validation-based model selection. Pretraining/fine-tuning lasts 5/20 epochs for M--V and 1/5 epochs for pairs involving Books. FedDCSR uses 10 communication rounds with three local epochs per round. The sequential benchmarks contain 10,634 Music, 89,254 Books, and 18,643 Movies items. Tables~\ref{tab:cross_main} and~\ref{tab:cross_main_remaining} list all six evaluated transfers.
+
+
+\newpage
+
+% --- appendix_settings_right ---
+\par\noindent\begin{minipage}{\columnwidth}\centering\footnotesize
+\captionof{table}{FedPASA HR@20/NDCG@20 under external conditions (three runs, base model). Noise averages six directions; encoder rows use the indicated direction.}\label{tab:external-conditions}
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lr@{}}
+\toprule
+Setting & HR@20/NDCG@20 \\
+\midrule
+5 clients & 0.4940/0.2183 \\
+20 clients & 0.5769/0.2788 \\
+50 clients & 0.6035/0.2935 \\
+Activity .1 & 0.4523/0.2059 \\
+Activity .5 & 0.4839/0.2167 \\
+Popularity .5 & 0.4895/0.2199 \\
+Fixed: 5 clients & 0.2803/0.1089 \\
+Fixed: 20 clients & 0.2460/0.0919 \\
+Fixed: 50 clients & 0.2419/0.0889 \\
+Participation .2 & 0.2583/0.1034 \\
+Participation .5 & 0.2692/0.1074 \\
+Update noise 0.1 & 0.4346/0.1938 \\
+Update noise 0.2 & 0.4351/0.1944 \\
+Update noise 0.3 & 0.4343/0.1941 \\
+LLaMA M$\to$V & 0.5091/0.2243 \\
+LLaMA B$\to$V & 0.4869/0.2203 \\
+LLaMA M$\to$B & 0.2519/0.0998 \\
+\bottomrule
+\end{tabular*}
+\end{minipage}\par\addvspace{6pt}
+\par\noindent\begin{minipage}{\columnwidth}\centering\footnotesize
+\captionof{table}{Anchor granularity (five-run cross-domain means).}\label{tab:anchor}
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrr@{}}
+\toprule
+Anchoring & HR@20 & NDCG@20 \\
+\midrule
+None & 0.4346 & 0.1934 \\
+Catalog gate & 0.4360 & 0.1944 \\
+Per-item gate & 0.4365 & 0.1950 \\
+\bottomrule
+\end{tabular*}
+\end{minipage}\par\addvspace{6pt}
+\par\noindent\begin{minipage}{\columnwidth}\centering\footnotesize
+\captionof{table}{Cosine distance from the frozen prior. Reference: TransFR.}\label{tab:drift}
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrr@{}}
+\toprule
+Slice & Reference & No anchor & Base \\
+\midrule
+Cross all & 0.8916 & 0.9450 & 0.9841 \\
+Cross cold & 0.8983 & 0.9721 & 0.9645 \\
+\bottomrule
+\end{tabular*}
+\end{minipage}\par\addvspace{6pt}
+\noindent Fixed-compute and participation controls use eight rounds with $\alpha=.55$, $\kappa=.7$, $\lambda=.4$, $\rho=.2$. Total steps per round are 150/160/150 at 5/20/50 clients. Full participation corresponds to the five-client setting. Other rows use the selected configuration.\par
+
+
+
+
+

@@ -1,0 +1,21 @@
+% !TeX root = ../main.tex
+\section{Dataset Statistics}
+\label{app:data}
+Table~\ref{tab:datasets} counts users retained after the three-interaction filter. Their last two events form validation and test sets. AutoAnchor uses the retained-user count divided by catalog size. Tests use a fixed subset of 5,000 users in each target domain.
+
+\par\addvspace{6pt}\noindent\begin{minipage}{\columnwidth}\centering\small
+\captionof{table}{Retained data after the three-interaction filter. $N$ includes train, validation, and test interactions; ``Eval.'' is the test-user count.}
+\label{tab:datasets}
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Dataset & Users & Items & $N$ & Eval. \\
+\midrule
+Music & 12,315 & 10,680 & 339,923 & 5,000 \\
+Books & 262,698 & 170,389 & 10,848,388 & 5,000 \\
+Movies & 28,226 & 19,252 & 1,056,608 & 5,000 \\
+\bottomrule
+\end{tabular}
+\end{minipage}\par\addvspace{6pt}
+
+Ranking masks training and validation items. The 99-negative sampler and FedMF's unpaired traversal follow \S\ref{sec:exp-setup}. DistilBERT uses normalized masked-mean features (maximum 96 tokens). The encoder check uses LLaMA-2-7B features with a fixed signed block projection to 512 dimensions.

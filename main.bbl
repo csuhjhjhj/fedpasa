@@ -1,0 +1,426 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{31}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Ammad-Ud-Din et~al\mbox{.}(2019)]%
+        {ammad2019federated}
+\bibfield{author}{\bibinfo{person}{Muhammad Ammad-Ud-Din},
+  \bibinfo{person}{Elena Ivannikova}, \bibinfo{person}{Suleiman~A Khan},
+  \bibinfo{person}{Quang Oyomno}, \bibinfo{person}{Qiang Fu},
+  \bibinfo{person}{Kuan~Ee Tan}, {and} \bibinfo{person}{Adrian Flanagan}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Federated Collaborative Filtering for
+  Privacy-Preserving Personalized Recommendation System}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1901.09888}}
+  (\bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[Arivazhagan et~al\mbox{.}(2019)]%
+        {arivazhagan2019federated}
+\bibfield{author}{\bibinfo{person}{Manoj~Ghuhan Arivazhagan},
+  \bibinfo{person}{Vinay Aggarwal}, \bibinfo{person}{Aaditya~Kumar Singh},
+  {and} \bibinfo{person}{Sunav Choudhary}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Federated Learning with Personalization Layers}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1912.00818}}
+  (\bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[Cao et~al\mbox{.}(2022)]%
+        {cao2022disencdr}
+\bibfield{author}{\bibinfo{person}{Jiangxia Cao}, \bibinfo{person}{Xixun Lin},
+  \bibinfo{person}{Xin Cong}, \bibinfo{person}{Jing Ya},
+  \bibinfo{person}{Tingwen Liu}, {and} \bibinfo{person}{Bin Wang}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Disen{CDR}: Learning Disentangled Representations
+  for Cross-Domain Recommendation}. In \bibinfo{booktitle}{\emph{Proceedings of
+  the 45th International ACM SIGIR Conference on Research and Development in
+  Information Retrieval}}. \bibinfo{pages}{267--277}.
+\newblock
+
+
+\bibitem[Chen et~al\mbox{.}(2020)]%
+        {chen2021esam}
+\bibfield{author}{\bibinfo{person}{Zhihong Chen}, \bibinfo{person}{Rong Xiao},
+  \bibinfo{person}{Chenliang Li}, \bibinfo{person}{Gang Ye},
+  \bibinfo{person}{Hao Sun}, {and} \bibinfo{person}{Hongbo Deng}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{ESAM: Discriminative Domain Adaptation with
+  Non-Displayed Items to Improve Long-Tail Performance}. In
+  \bibinfo{booktitle}{\emph{Proceedings of SIGIR}}.
+\newblock
+
+
+\bibitem[Dinh et~al\mbox{.}(2020)]%
+        {dinh2020personalized}
+\bibfield{author}{\bibinfo{person}{Canh~T. Dinh}, \bibinfo{person}{Nguyen~H.
+  Tran}, {and} \bibinfo{person}{Tuan~Dung Nguyen}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Personalized Federated Learning with Moreau
+  Envelopes}. In \bibinfo{booktitle}{\emph{Advances in Neural Information
+  Processing Systems}}, Vol.~\bibinfo{volume}{33}.
+  \bibinfo{pages}{21394--21405}.
+\newblock
+
+
+\bibitem[Guo et~al\mbox{.}(2024)]%
+        {guo2024pfcr}
+\bibfield{author}{\bibinfo{person}{Lei Guo}, \bibinfo{person}{Ziang Lu},
+  \bibinfo{person}{Junliang Yu}, \bibinfo{person}{Nguyen Quoc~Viet Hung}, {and}
+  \bibinfo{person}{Hongzhi Yin}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Prompt-Enhanced Federated Content Representation
+  Learning for Cross-Domain Recommendation}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2401.14678}}
+  (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Guo et~al\mbox{.}(2026)]%
+        {guo2026fedcrf}
+\bibfield{author}{\bibinfo{person}{Lei Guo}, \bibinfo{person}{Ting Yang},
+  \bibinfo{person}{Hui Liu}, \bibinfo{person}{Xu Yu}, \bibinfo{person}{Xiaohui
+  Han}, {and} \bibinfo{person}{Xinhua Wang}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{FedCRF}: A Federated Cross-Domain Recommendation
+  Method with Semantic-Driven Deep Knowledge Fusion}.
+\newblock \bibinfo{journal}{\emph{Information Processing \& Management}}
+  (\bibinfo{year}{2026}).
+\newblock
+\showeprint[arxiv]{2604.17681}
+\href{https://doi.org/10.1016/j.ipm.2026.104827}{doi:\nolinkurl{10.1016/j.ipm.2026.104827}}
+
+
+\bibitem[He et~al\mbox{.}(2026)]%
+        {he2026fedecider}
+\bibfield{author}{\bibinfo{person}{Xinrui He}, \bibinfo{person}{Ting-Wei Li},
+  \bibinfo{person}{Tianxin Wei}, \bibinfo{person}{Xuying Ning},
+  \bibinfo{person}{Xinyu He}, \bibinfo{person}{Wenxuan Bao},
+  \bibinfo{person}{Hanghang Tong}, {and} \bibinfo{person}{Jingrui He}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{FeDecider}: An {LLM}-Based Framework for Federated
+  Cross-Domain Recommendation}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  ACM Web Conference}}.
+\newblock
+\href{https://doi.org/10.1145/3774904.3792294}{doi:\nolinkurl{10.1145/3774904.3792294}}
+
+
+\bibitem[Lee et~al\mbox{.}(2019)]%
+        {lee2019melu}
+\bibfield{author}{\bibinfo{person}{Hoyeop Lee}, \bibinfo{person}{Jinbae Im},
+  \bibinfo{person}{Seongwon Jang}, \bibinfo{person}{Hyunsouk Cho}, {and}
+  \bibinfo{person}{Sehee Chung}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{MeLU: Meta-Learned User Preference Estimator for
+  Cold-Start Recommendation}. In \bibinfo{booktitle}{\emph{Proceedings of
+  KDD}}.
+\newblock
+
+
+\bibitem[Li et~al\mbox{.}(2021)]%
+        {li2021ditto}
+\bibfield{author}{\bibinfo{person}{Tian Li}, \bibinfo{person}{Shengyuan Hu},
+  \bibinfo{person}{Ahmad Beirami}, {and} \bibinfo{person}{Virginia Smith}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Ditto: Fair and Robust Federated Learning Through
+  Personalization}. In \bibinfo{booktitle}{\emph{Proceedings of the 38th
+  International Conference on Machine Learning (ICML)}}.
+  \bibinfo{pages}{6357--6368}.
+\newblock
+
+
+\bibitem[Li et~al\mbox{.}(2020)]%
+        {li2020federated}
+\bibfield{author}{\bibinfo{person}{Tian Li}, \bibinfo{person}{Anit~Kumar Sahu},
+  \bibinfo{person}{Manzil Zaheer}, \bibinfo{person}{Maziar Sanjabi},
+  \bibinfo{person}{Ameet Talwalkar}, {and} \bibinfo{person}{Virginia Smith}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Federated Optimization in Heterogeneous Networks}.
+\newblock \bibinfo{journal}{\emph{Proceedings of Machine Learning and Systems}}
+   \bibinfo{volume}{2} (\bibinfo{year}{2020}), \bibinfo{pages}{429--450}.
+\newblock
+
+
+\bibitem[Li et~al\mbox{.}(2018)]%
+        {li2018explicit}
+\bibfield{author}{\bibinfo{person}{Xuhong Li}, \bibinfo{person}{Yves
+  Grandvalet}, {and} \bibinfo{person}{Franck Davoine}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Explicit Inductive Bias for Transfer Learning with
+  Convolutional Networks}. In \bibinfo{booktitle}{\emph{Proceedings of the 35th
+  International Conference on Machine Learning (ICML)}}.
+  \bibinfo{pages}{2825--2834}.
+\newblock
+
+
+\bibitem[Li et~al\mbox{.}(2019)]%
+        {li2019delta}
+\bibfield{author}{\bibinfo{person}{Xingjian Li}, \bibinfo{person}{Haoyi Xiong},
+  \bibinfo{person}{Haozhe Wang}, \bibinfo{person}{Yifan Rao},
+  \bibinfo{person}{Liping Liu}, \bibinfo{person}{Jie Chen}, {and}
+  \bibinfo{person}{Jun Huan}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{{DELTA}: Deep Learning Transfer using Feature Map
+  with Attention for Convolutional Networks}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 7th International Conference on
+  Learning Representations (ICLR)}}.
+\newblock
+
+
+\bibitem[Li et~al\mbox{.}(2026)]%
+        {li2026fedvlr}
+\bibfield{author}{\bibinfo{person}{Zhiwei Li}, \bibinfo{person}{Guodong Long},
+  \bibinfo{person}{Jing Jiang}, \bibinfo{person}{Chengqi Zhang}, {and}
+  \bibinfo{person}{Qiang Yang}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{Federated Vision-Language-Recommendation with
+  Personalized Fusion}. In \bibinfo{booktitle}{\emph{Proceedings of the AAAI
+  Conference on Artificial Intelligence}}, Vol.~\bibinfo{volume}{40}.
+  \bibinfo{pages}{23337--23345}.
+\newblock
+\href{https://doi.org/10.1609/aaai.v40i28.39503}{doi:\nolinkurl{10.1609/aaai.v40i28.39503}}
+
+
+\bibitem[Liu et~al\mbox{.}(2021)]%
+        {liu2021fedct}
+\bibfield{author}{\bibinfo{person}{Shuxia Liu}, \bibinfo{person}{Shuang Xu},
+  \bibinfo{person}{Wei Yu}, \bibinfo{person}{Zhiqian Fu},
+  \bibinfo{person}{Yongfeng Zhang}, {and} \bibinfo{person}{Amelie Marian}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{{FedCT}: Federated Collaborative Transfer for
+  Recommendation}. In \bibinfo{booktitle}{\emph{Proceedings of the 44th
+  International ACM SIGIR Conference on Research and Development in Information
+  Retrieval}}. \bibinfo{pages}{716--725}.
+\newblock
+
+
+\bibitem[Lu et~al\mbox{.}(2025)]%
+        {lu2025ffmsr}
+\bibfield{author}{\bibinfo{person}{Ziang Lu}, \bibinfo{person}{Lei Guo},
+  \bibinfo{person}{Xu Yu}, \bibinfo{person}{Zhiyong Cheng},
+  \bibinfo{person}{Xiaohui Han}, {and} \bibinfo{person}{Lei Zhu}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Federated Semantic Learning for Privacy-Preserving
+  Cross-Domain Recommendation}.
+\newblock \bibinfo{journal}{\emph{ACM Transactions on Information Systems}}
+  (\bibinfo{year}{2025}).
+\newblock
+\showeprint[arxiv]{2503.23026}
+
+
+\bibitem[Ma et~al\mbox{.}(2018)]%
+        {ma2018mmoe}
+\bibfield{author}{\bibinfo{person}{Jiaqi Ma}, \bibinfo{person}{Zhe Zhao},
+  \bibinfo{person}{Xinyang Yi}, \bibinfo{person}{Jilin Chen},
+  \bibinfo{person}{Lichan Hong}, {and} \bibinfo{person}{Ed~H. Chi}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Modeling Task Relationships in Multi-Task Learning
+  with Multi-Gate Mixture-of-Experts}. In \bibinfo{booktitle}{\emph{Proceedings
+  of KDD}}.
+\newblock
+
+
+\bibitem[Man et~al\mbox{.}(2017)]%
+        {man2017cross}
+\bibfield{author}{\bibinfo{person}{Tong Man}, \bibinfo{person}{Huawei Shen},
+  \bibinfo{person}{Xiaolong Jin}, {and} \bibinfo{person}{Xueqi Cheng}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Cross-Domain Recommendation: An Embedding and
+  Mapping Approach}. In \bibinfo{booktitle}{\emph{Proceedings of the 26th
+  International Joint Conference on Artificial Intelligence (IJCAI)}}.
+  \bibinfo{pages}{2464--2470}.
+\newblock
+
+
+\bibitem[McMahan et~al\mbox{.}(2017)]%
+        {mcmahan2017communication}
+\bibfield{author}{\bibinfo{person}{Brendan McMahan}, \bibinfo{person}{Eider
+  Moore}, \bibinfo{person}{Daniel Ramage}, \bibinfo{person}{Seth Hampson},
+  {and} \bibinfo{person}{Blaise~Aguera y Arcas}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Communication-Efficient Learning of Deep Networks
+  from Decentralized Data}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  20th International Conference on Artificial Intelligence and Statistics
+  (AISTATS)}}. \bibinfo{pages}{1273--1282}.
+\newblock
+
+
+\bibitem[Mei et~al\mbox{.}(2024)]%
+        {mei2024fedmoe}
+\bibfield{author}{\bibinfo{person}{Hanzi Mei}, \bibinfo{person}{Dongqi Cai},
+  \bibinfo{person}{Ao Zhou}, \bibinfo{person}{Shangguang Wang}, {and}
+  \bibinfo{person}{Mengwei Xu}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{FedMoE}: Personalized Federated Learning via
+  Heterogeneous Mixture of Experts}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2408.11304}}
+  (\bibinfo{year}{2024}).
+\newblock
+\href{https://doi.org/10.48550/arXiv.2408.11304}{doi:\nolinkurl{10.48550/arXiv.2408.11304}}
+
+
+\bibitem[Ni et~al\mbox{.}(2019)]%
+        {ni2019justifying}
+\bibfield{author}{\bibinfo{person}{Jianmo Ni}, \bibinfo{person}{Jiacheng Li},
+  {and} \bibinfo{person}{Julian McAuley}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Justifying Recommendations Using Distantly-Labeled
+  Reviews and Fine-Grained Aspects}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 2019 Conference on Empirical Methods in Natural Language Processing
+  and the 9th International Joint Conference on Natural Language Processing
+  (EMNLP-IJCNLP)}}. \bibinfo{pages}{188--197}.
+\newblock
+
+
+\bibitem[Perez et~al\mbox{.}(2018)]%
+        {perez2018film}
+\bibfield{author}{\bibinfo{person}{Ethan Perez}, \bibinfo{person}{Florian
+  Strub}, \bibinfo{person}{Harm de Vries}, \bibinfo{person}{Vincent Dumoulin},
+  {and} \bibinfo{person}{Aaron Courville}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{FiLM}: Visual Reasoning with a General
+  Conditioning Layer}. In \bibinfo{booktitle}{\emph{Proceedings of the AAAI
+  Conference on Artificial Intelligence}}, Vol.~\bibinfo{volume}{32}.
+\newblock
+
+
+\bibitem[Reddi et~al\mbox{.}(2021)]%
+        {reddi2021adaptive}
+\bibfield{author}{\bibinfo{person}{Sashank~J Reddi}, \bibinfo{person}{Zachary
+  Charles}, \bibinfo{person}{Manzil Zaheer}, \bibinfo{person}{Zachary Garrett},
+  \bibinfo{person}{Keith Rush}, \bibinfo{person}{Jakub Konecn{\'y}},
+  \bibinfo{person}{Sanjiv Kumar}, {and} \bibinfo{person}{H~Brendan McMahan}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Adaptive Federated Optimization}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 9th International Conference on
+  Learning Representations (ICLR)}}.
+\newblock
+
+
+\bibitem[Rendle et~al\mbox{.}(2009)]%
+        {rendle2009bpr}
+\bibfield{author}{\bibinfo{person}{Steffen Rendle}, \bibinfo{person}{Christoph
+  Freudenthaler}, \bibinfo{person}{Zeno Gantner}, {and} \bibinfo{person}{Lars
+  Schmidt-Thieme}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{{BPR}: Bayesian Personalized Ranking from Implicit
+  Feedback}. In \bibinfo{booktitle}{\emph{Proceedings of the Twenty-Fifth
+  Conference on Uncertainty in Artificial Intelligence (UAI)}}.
+  \bibinfo{pages}{452--461}.
+\newblock
+
+
+\bibitem[Sanh et~al\mbox{.}(2019)]%
+        {sanh2019distilbert}
+\bibfield{author}{\bibinfo{person}{Victor Sanh}, \bibinfo{person}{Lysandre
+  Debut}, \bibinfo{person}{Julien Chaumond}, {and} \bibinfo{person}{Thomas
+  Wolf}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Distil{BERT}, a Distilled Version of {BERT}:
+  Smaller, Faster, Cheaper and Lighter}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1910.01108}}
+  (\bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[Singh and Gordon(2008)]%
+        {singh2008relational}
+\bibfield{author}{\bibinfo{person}{Ajit~Paul Singh} {and}
+  \bibinfo{person}{Geoffrey~J Gordon}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Relational Learning via Collective Matrix
+  Factorization}. In \bibinfo{booktitle}{\emph{Proceedings of the 14th ACM
+  SIGKDD International Conference on Knowledge Discovery and Data Mining}}.
+  \bibinfo{pages}{650--658}.
+\newblock
+
+
+\bibitem[Zhang et~al\mbox{.}(2024a)]%
+        {li2026fedpa}
+\bibfield{author}{\bibinfo{person}{Chunxu Zhang}, \bibinfo{person}{Guodong
+  Long}, \bibinfo{person}{Hongkuan Guo}, \bibinfo{person}{Xiao Fang},
+  \bibinfo{person}{Yang Song}, \bibinfo{person}{Zhaojie Liu},
+  \bibinfo{person}{Guorui Zhou}, \bibinfo{person}{Zijian Zhang},
+  \bibinfo{person}{Yang Liu}, {and} \bibinfo{person}{Bo Yang}.}
+  \bibinfo{year}{2024}\natexlab{a}.
+\newblock \showarticletitle{Federated Adaptation for Foundation Model-Based
+  Recommendations}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  Thirty-Third International Joint Conference on Artificial Intelligence
+  (IJCAI)}}. \bibinfo{pages}{5453--5461}.
+\newblock
+
+
+\bibitem[Zhang et~al\mbox{.}(2024b)]%
+        {zhang2024ifedrec}
+\bibfield{author}{\bibinfo{person}{Chao Zhang}, \bibinfo{person}{Guodong Long},
+  \bibinfo{person}{Tianyi Zhou}, \bibinfo{person}{Zijian Zhang},
+  \bibinfo{person}{Peng Yan}, {and} \bibinfo{person}{Baodi Yang}.}
+  \bibinfo{year}{2024}\natexlab{b}.
+\newblock \showarticletitle{When Federated Recommendation Meets Cold-Start
+  Problem: Separating Item Attributes and User Interactions}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the ACM on Web Conference (WWW)}}.
+  \bibinfo{pages}{3632--3642}.
+\newblock
+
+
+\bibitem[Zhang et~al\mbox{.}(2026)]%
+        {zhang2026transfr}
+\bibfield{author}{\bibinfo{person}{Honglei Zhang}, \bibinfo{person}{Zhiwei Li},
+  \bibinfo{person}{Haoxuan Li}, \bibinfo{person}{Xin Zhou},
+  \bibinfo{person}{Jie Zhang}, {and} \bibinfo{person}{Yidong Li}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{TransFR}: Transferable Federated Recommendation
+  with Adapter Tuning on Pre-trained Language Models}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}}, Vol.~\bibinfo{volume}{40}. \bibinfo{pages}{28212--28220}.
+\newblock
+
+
+\bibitem[Zhang et~al\mbox{.}(2024c)]%
+        {zhang2024feddcsr}
+\bibfield{author}{\bibinfo{person}{Huili Zhang}, \bibinfo{person}{Dongxia
+  Zheng}, \bibinfo{person}{Xiang Yang}, \bibinfo{person}{Juan Feng}, {and}
+  \bibinfo{person}{Qimei Liao}.} \bibinfo{year}{2024}\natexlab{c}.
+\newblock \showarticletitle{{FedDCSR}: Federated Cross-Domain Sequential
+  Recommendation via Disentangled Representation Learning}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2024 SIAM International
+  Conference on Data Mining (SDM)}}. \bibinfo{pages}{535--543}.
+\newblock
+
+
+\bibitem[Zhao et~al\mbox{.}(2025)]%
+        {zhao2025fellrec}
+\bibfield{author}{\bibinfo{person}{Jingtao Zhao}, \bibinfo{person}{Wenjie
+  Wang}, \bibinfo{person}{Cong Xu}, \bibinfo{person}{See-Kiong Ng}, {and}
+  \bibinfo{person}{Tat-Seng Chua}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{A Federated Framework for {LLM}-based
+  Recommendation}. In \bibinfo{booktitle}{\emph{Findings of the Association for
+  Computational Linguistics: NAACL 2025}}. \bibinfo{pages}{2852--2865}.
+\newblock
+
+
+\end{thebibliography}

@@ -1,0 +1,11 @@
+% !TeX root = ../main.tex
+\section{Related Work}
+\label{sec:related}
+\subsection{Federated Semantic Transfer}
+FR learns shared parameters from decentralized interactions~\citep{ammad2019federated,mcmahan2017communication}; proximal optimization and local components address heterogeneity~\citep{li2020federated,arivazhagan2019federated,dinh2020personalized,li2021ditto}. Transferring item-ID models across disjoint catalogs requires alignment or content. TransFR combines pretrained language representations, adapter tuning, and local personalization~\citep{zhang2026transfr}. FedDCSR disentangles shared and domain-specific sequential factors~\citep{zhang2024feddcsr}; PFCR and FFMSR transfer text-derived content~\citep{guo2024pfcr,lu2025ffmsr}; FedCRF uses semantic graphs and contrastive fusion~\citep{guo2026fedcrf}. FeDecider personalizes LoRA aggregation with client-specific directional weights~\citep{he2026fedecider}. Beyond sequence modeling, fusion, and aggregation, FedPASA studies item-level supervision allocation within a shared semantic adapter.
+
+\subsection{Personalization and Preservation}
+FedPA combines private user adapters, shared group adapters, and adaptive gating~\citep{li2026fedpa}; FedVLR personalizes multimodal expert mixtures~\citep{li2026fedvlr}. ESAM addresses long-tail imbalance~\citep{chen2021esam}, MeLU adapts user preferences~\citep{lee2019melu}, and multi-gate MoE learns input-dependent expert combinations~\citep{ma2018mmoe}. PGDR instead derives deterministic routing weights from target item frequency. Learned, constant, and shuffled routing provide comparisons that isolate this allocation rule.
+
+FiLM applies feature-wise scales and shifts~\citep{perez2018film}; FedPASA generates them from a private client profile within a shared adapter. L2-SP and DELTA preserve source information through parameter or feature penalties~\citep{li2018explicit,li2019delta}. AutoAnchor instead interpolates the normalized ranking representation with the frozen semantic prior. Its fixed catalog-level coverage heuristic is motivated by bias--variance and geometric analyses and assessed through ranking experiments.
+

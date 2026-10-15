@@ -1,0 +1,155 @@
+% !TeX root = ../main.tex
+\clearpage
+\twocolumn[{\section{Additional Baseline Comparisons and Ablations}\label{app:external}}]
+
+% --- tables_external_baselines ---
+\par\noindent\begin{minipage}{\columnwidth}\centering\small
+\captionof{table}{Cross-domain recommendation on Amazon Music/Books/Movies~\citep{zhang2026transfr}. Each cell contains HR@10/NDCG@10.}
+\label{tab:transfr-published}
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Method & M$\to$B & M$\to$V & B$\to$V & Mean \\
+\midrule
+CMF~\citep{singh2008relational} & .1833/.0955 & .1378/.0764 & .1455/.0662 & .1555/.0794 \\
+EMCDR~\citep{man2017cross} & .2149/.1121 & .1893/.0901 & .1652/.0705 & .1898/.0909 \\
+DisenCDR~\citep{cao2022disencdr} & .2243/.1182 & .1988/.0923 & .1912/.0821 & .2048/.0975 \\
+FCF~\citep{ammad2019federated} & .1380/.0663 & .1154/.0583 & .1004/.0421 & .1179/.0556 \\
+IFedRec~\citep{zhang2024ifedrec} & .1981/.0834 & .1810/.0673 & .1703/.0497 & .1831/.0668 \\
+FELLRec~\citep{zhao2025fellrec} & .2003/.0995 & .1844/.0812 & .1731/.0831 & .1859/.0879 \\
+FedCT~\citep{liu2021fedct} & .2034/.1122 & .1765/.0899 & .1585/.0845 & .1795/.0955 \\
+FedDCSR~\citep{zhang2024feddcsr} & .2217/.1085 & .1881/.0892 & .1719/.0732 & .1939/.0903 \\
+\textbf{TransFR}~\citep{zhang2026transfr} & \textbf{.2335/.1133} & \textbf{.2123/.0934} & \textbf{.2089/.0893} & \textbf{.2182/.0987} \\
+\bottomrule
+\end{tabular}
+
+\end{minipage}\par\addvspace{8pt}
+
+% --- tables_ablation_revised ---
+\par\noindent\begin{minipage}{\columnwidth}\centering\footnotesize
+\captionof{table}{Component and capacity controls: six-transfer means over five runs. Only the final row includes personalization.}\label{tab:ablation}
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrr@{}}
+\toprule
+Model & HR@20 & NDCG@20 \\
+\midrule
+FedPASA base & 0.4360 & 0.1944 \\
+w/o PGDR & 0.3434 & 0.1373 \\
+w/o FiLM & 0.4245 & 0.1867 \\
+w/o AutoAnchor & 0.4346 & 0.1934 \\
+Constant routing & 0.3481 & 0.1404 \\
+Random routing & 0.3381 & 0.1350 \\
+Per-item anchor & 0.4365 & 0.1950 \\
+Source-free base & 0.4362 & 0.1958 \\
+FedMoE~\citep{mei2024fedmoe} & 0.3548 & 0.1420 \\
+Personalized & 0.4390 & 0.1965 \\
+\bottomrule
+\end{tabular*}
+\end{minipage}\par\addvspace{6pt}
+
+
+% --- appendix_notation ---
+\subsection{Notation}
+\label{app:notation}
+\par\addvspace{3pt}\noindent\begin{minipage}{\columnwidth}\centering\footnotesize
+\captionof{table}{Notation used in FedPASA.}
+\label{tab:notation}
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\columnwidth}{@{}lX@{}}
+\toprule
+Symbol & Definition \\
+\midrule
+$x_i$, $e_u$ & Unit frozen item vector; private user vector \\
+$A_h,A_l$ & Source-initialized and target-initialized adapters \\
+$F_\ell$ & Bottleneck MLP in residual block $\ell$ \\
+$q_i,q_i'$ & Normalized and sharpened inverse-frequency scores \\
+$t,\kappa$ & Routing threshold and exponent \\
+$h_i,m_{c,i},z_{c,i}$ & Routed, modulated, and normalized residual features \\
+$p_c,g_\phi$ & Private client profile; shared FiLM conditioner \\
+$\alpha,\lambda$ & Residual-mixture and FiLM strengths \\
+$\eta_T,\rho_{\mathrm{eff}}$ & User-to-item ratio; resulting anchor weight \\
+$\rho,\tau_l,\tau_h$ & Maximum anchor weight and ratio thresholds \\
+$\Theta,\mu,\mu_p$ & Shared parameters; federation and personalization penalties \\
+$r,b^2,\sigma^2$ & Reliability, squared prior bias, and noise scale in Proposition~\ref{thm:anchor} \\
+\bottomrule
+\end{tabularx}
+\end{minipage}\par\addvspace{3pt}
+
+\newpage
+\par\noindent\begin{minipage}{\columnwidth}\centering\small
+\captionof{table}{FFMSR and PFCR recommendation performance. R: recall; N: NDCG.}
+\label{tab:ffmsr-pfcr-published}
+\textbf{FFMSR}~\citep{lu2025ffmsr}\\[2pt]
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Domain & R10 & R50 & N10 & N50 \\
+\midrule
+Office & .1312 & .2069 & .0890 & .1054 \\
+Arts & .1257 & .2377 & .0711 & .0955 \\
+OnlineRetail & .1655 & .4110 & .0763 & .1300 \\
+Pantry & .0695 & .1818 & .0326 & .0568 \\
+\bottomrule
+\end{tabular}
+\\[4pt]
+\textbf{PFCR (full prompting)}~\citep{guo2024pfcr}\\[2pt]
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Domain & R10 & R50 & N10 & N50 \\
+\midrule
+Office & .1206 & .1938 & .0782 & .0941 \\
+Arts & .1153 & .2199 & .0677 & .0904 \\
+OnlineRetail & .1561 & .3982 & .0739 & .1266 \\
+Pantry & .0616 & .1591 & .0293 & .0503 \\
+\bottomrule
+\end{tabular}
+
+\end{minipage}\par\addvspace{8pt}
+\par\noindent\begin{minipage}{\columnwidth}\centering\small
+\captionof{table}{FedCRF full-ranking performance across domain pairs~\citep{guo2026fedcrf}.}
+\label{tab:external-published-b}
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Pair & Domain & R@10 & R@20 & N@10 & N@20 \\
+\midrule
+Kitchen--Food & Kitchen & .04465 & .06601 & .02523 & .03112 \\
+ & Food & .11078 & .16105 & .06708 & .08193 \\
+Care--Beauty & Care & .07115 & .09897 & .04250 & .05001 \\
+ & Beauty & .09342 & .13384 & .05398 & .06513 \\
+Food--OnlineRetail & Food & .11142 & .16185 & .06713 & .08189 \\
+ & OnlineRetail & .22864 & .31488 & .19232 & .23368 \\
+\bottomrule
+\end{tabular}
+
+\end{minipage}\par\addvspace{8pt}
+
+% --- tables_frequency_slices ---
+
+\par\noindent\begin{minipage}{\columnwidth}\centering\footnotesize
+\captionof{table}{Fine-grained frequency slices (99-negative ranking; unpersonalized models).}\label{tab:buckets}
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrr@{}}
+\toprule
+Frequency & Method & HR@20 & NDCG@20 \\
+\midrule
+Unseen & TransFR~\citep{zhang2026transfr} & 0.3020 & 0.1070 \\
+ & FedMoE~\citep{mei2024fedmoe} & 0.2460 & 0.0927 \\
+ & FedPASA base & 0.5360 & 0.3783 \\
+1--5 & TransFR~\citep{zhang2026transfr} & 0.3711 & 0.1562 \\
+ & FedMoE~\citep{mei2024fedmoe} & 0.3915 & 0.1662 \\
+ & FedPASA base & 0.3439 & 0.2045 \\
+6--20 & TransFR~\citep{zhang2026transfr} & 0.3465 & 0.1395 \\
+ & FedMoE~\citep{mei2024fedmoe} & 0.3541 & 0.1438 \\
+ & FedPASA base & 0.2631 & 0.0990 \\
+>20 & TransFR~\citep{zhang2026transfr} & 0.3455 & 0.1361 \\
+ & FedMoE~\citep{mei2024fedmoe} & 0.3544 & 0.1404 \\
+ & FedPASA base & 0.4956 & 0.2258 \\
+\bottomrule
+\end{tabular*}
+\end{minipage}\par\addvspace{6pt}
+\noindent The unseen slice contains 20 nonempty evaluations (mean support: 13 users); other slices contain 30. Evaluations with zero hits are included.\par
+
+
+
+
