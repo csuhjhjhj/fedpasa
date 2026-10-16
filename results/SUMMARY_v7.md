@@ -1,0 +1,13 @@
+# v7 cross main (s99 HR@20, avg over 6 directions)
+- ffmsr: 0.7707
+- fedpasa: 0.4390
+- fedecider: 0.3862
+- fedmoe: 0.3548
+- fedper: 0.3509
+- scratch: 0.3488
+- fedadam: 0.3485
+- pfedme: 0.3474
+- fedprox: 0.3468
+- transfr: 0.3462
+- l2sp: 0.3412
+- fcf: 0.2115
